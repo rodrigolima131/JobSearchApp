@@ -175,9 +175,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\back.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi - Copia\ok.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\ok.png" />
   </ItemGroup>
   <ItemGroup>
