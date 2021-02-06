@@ -20,7 +20,7 @@
             
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="Padding" Value="15" />
-                
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
             </Style>
 
             <Style TargetType="Label" x:Key="Title">
