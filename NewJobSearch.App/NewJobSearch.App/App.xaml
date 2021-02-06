@@ -21,6 +21,10 @@
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="Padding" Value="15" />
                 <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+                <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
             </Style>
 
             <Style TargetType="Label" x:Key="Title">
@@ -47,11 +51,51 @@
                 <Setter Property="FontSize" Value="12"/>
             </Style>
 
+            <Style TargetType="ImageButton" x:Key="BackButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="WidthRequest" Value="29"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="HeightRequest" Value="10"/>
+                <Setter Property="Source" Value="back.png"/>
+                
+                <!-- TODO - Source para UWP-->
+            </Style>
+
+            <Style TargetType="Label" x:Key="BaseLabel">
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
             <Style TargetType="Frame" Class="EntryFrame">
                 <Setter Property="BackgroundColor" Value="{StaticResource GrayBlue}"/>
                 <Setter Property="Padding" Value="10,0"/>
                 <Setter Property="CornerRadius" Value="5"/>
                 <Setter Property="HasShadow" Value="False"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="CompanyCityStateLabel" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="TextColor" Value="{StaticResource Gray}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="JobTitleLabel" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="TextColor" Value="{StaticResource DarkGray}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="TitleLabelPurple" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="TextColor" Value="{StaticResource Purple}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="CurrencyLabel" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="TextColor" Value="{StaticResource LightGray}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="IdLabel">
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="8"/>
+                <Setter Property="TextColor" Value="{StaticResource Gray}"/>
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="End" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

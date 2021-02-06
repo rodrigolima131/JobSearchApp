@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace NewJobSearch.App.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Start : ContentPage
+    public partial class Visualizer : ContentPage
     {
-        public Start()
+        public Visualizer()
         {
             InitializeComponent();
         }
 
-        private void GoVisualizer(object sender, EventArgs e)
+        private void GoBack(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Visualizer());
+            Navigation.PopAsync();
         }
     }
 }

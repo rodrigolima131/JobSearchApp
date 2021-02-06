@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewJobSearch.App.Views.Visualizer">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <ImageButton Style="{StaticResource BackButton}" Clicked="GoBack"/>
+                <Label Text="JobSearch" Style="{StaticResource Title}" Grid.Column="1" />
+            </Grid>
+            
+            <BoxView Color="#F3F5F7" HeightRequest="1" />
+            <ScrollView>
+        <StackLayout>
+        <Grid RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Text="Digital Ocean"  Style="{StaticResource CompanyCityStateLabel}"  Grid.ColumnSpan="2"/>
+                <Label Text="Back-End Developer"  Style="{StaticResource JobTitleLabel}" Grid.Row="1"/>
+                <Label Text="São Paulo - SP"  Style="{StaticResource CompanyCityStateLabel}"  Grid.Row="2"/>
+                <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="7.0-11k" Style="{StaticResource TitleLabelPurple}"/>
+                            <Span Text=" BRL" Style="{StaticResource CurrencyLabel}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text="CLT" Style="{StaticResource JobTitleLabel}" Grid.Row="4"/>
+                <Label Text="Tags" Grid.Row="5"/>
+
+                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource JobTitleLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Pub. " />
+                            <Span Text="06/02/2021" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource IdLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="id. " />
+                            <Span Text="23145" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+
+            <Label Text="Interresados enviar e-mail para" Style="{StaticResource JobTitleLabel}" />
+            <Label Text="job@digitalocean.com.br" Style="{StaticResource CompanyCityStateLabel}" />
+            
+            <Label Text="Descrição Empresa" Style="{StaticResource TitleLabelPurple}"/>
+            <Label Text=" A DigitalOcean, Inc é uma provedora americana de infraestrutura em nuvem com sede na cidade de Nova York" Style="{StaticResource JobTitleLabel}"/>
+            <Label Text="Descrição do trabalho" Style="{StaticResource TitleLabelPurple}"/>
+            <Label Text="Implementar novas tecnologias de gerenciamento de servidores fazer integração com ferramentas VM" Style="{StaticResource JobTitleLabel}"/>
+            <Label Text="Beneficios" Style="{StaticResource TitleLabelPurple}"/>
+            <Label Text="Vale transporte Vale transporta" Style="{StaticResource JobTitleLabel}"/>
+            </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
