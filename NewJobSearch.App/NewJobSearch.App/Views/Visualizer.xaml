@@ -15,8 +15,7 @@
                 <ImageButton Style="{StaticResource BackButton}" Clicked="GoBack"/>
                 <Label Text="JobSearch" Style="{StaticResource Title}" Grid.Column="1" />
             </Grid>
-            
-            <BoxView Color="#F3F5F7" HeightRequest="1" />
+            <BoxView StyleClass="LinePurple"/>
             <ScrollView>
         <StackLayout>
         <Grid RowSpacing="0">

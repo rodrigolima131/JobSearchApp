@@ -11,11 +11,11 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="JobSearch" Style="{StaticResource Title}" />
-                <Button Text="+Add Job" Grid.Column="1"/>
+                <Button Text="+Add Job" StyleClass="AddButton" Clicked="GoRegisterJob" Grid.Column="1"/>
             </Grid>
-            <BoxView Color="#D7CCFF" HeightRequest="1"/>
+            <BoxView StyleClass="LinePurple"/>
 
-            <Grid Margin="0,10,0,10">
+            <Grid Margin="0,0,0,10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="2*"/>
@@ -24,11 +24,25 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Frame StyleClass="EntryFrame"  Grid.Row="0" Grid.ColumnSpan="2">
-                    <Entry Placeholder="Pesquisa"/>
+                <Frame StyleClass="EntryFrame"  Grid.Row="0" Grid.ColumnSpan="2" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ImageButton StyleClass="SearchButton" Clicked="FocusSearch"/>
+                        <Entry Placeholder="Pesquisa" x:Name="TxtPesquisa" Grid.Column="1"/>
+                    </Grid>
                 </Frame>
                 <Frame StyleClass="EntryFrame" Grid.Row="1">
-                    <Entry Placeholder="Cidade/Estado" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ImageButton StyleClass="PinButton" Clicked="FocusCity"/>
+                        <Entry Placeholder="Cidade/Estado" x:Name="TxtCityState" Grid.Column="1"/>
+                    </Grid>
                 </Frame>
                 <Button Text="Pesquisar"  Grid.Row="1" Grid.Column="1"/>
             </Grid>
@@ -40,6 +54,8 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+
+
             <Frame BorderColor="{StaticResource GrayBlue}" Padding="15"  HasShadow="true" Margin="4">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="GoVisualizer"/>
@@ -79,6 +95,50 @@
                     </Label>
                 </Grid>
             </Frame>
+            
+            <!-- Teste-->
+
+            <Frame BorderColor="{StaticResource GrayBlue}" Padding="15"  HasShadow="true" Margin="4">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoVisualizer"/>
+                </Frame.GestureRecognizers>
+                <Grid RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Google"  Style="{StaticResource CompanyCityStateLabel}"  Grid.ColumnSpan="2"/>
+                    <Label Text="Front-End Developer"  Style="{StaticResource JobTitleLabel}" Grid.Row="1"/>
+                    <Label Text="São Paulo - SP"  Style="{StaticResource CompanyCityStateLabel}"  Grid.Row="2"/>
+                    <Label Text="Tags" Grid.Row="3"/>
+
+                    <Label Grid.Row="1" Grid.Column="1">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="10.0-11k" Style="{StaticResource TitleLabelPurple}"/>
+                                <Span Text=" BRL" Style="{StaticResource CurrencyLabel}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label Grid.Row="3" Grid.Column="1" Style="{StaticResource IdLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="id. " />
+                                <Span Text="23146" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </Frame>
+
+
         </StackLayout>
 
     </ContentPage.Content>

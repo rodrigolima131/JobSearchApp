@@ -21,5 +21,20 @@ namespace NewJobSearch.App.Views
         {
             Navigation.PushAsync(new Visualizer());
         }
+
+        private void GoRegisterJob(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RegisterJob());
+        }
+
+        private void FocusSearch(object sender, EventArgs e)
+        {
+            TxtPesquisa.Focus();
+        }
+
+        private void FocusCity(object sender, EventArgs e)
+        {
+            TxtCityState.Focus();
+        }
     }
 }
