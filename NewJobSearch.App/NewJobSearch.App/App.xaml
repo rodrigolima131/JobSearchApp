@@ -38,6 +38,7 @@
             </Style>
 
             <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="TextColor" Value="{StaticResource Black}"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource DarkGrayBlue}"/>
                 <Setter Property="FontFamily" Value="MontserratRegular"/>
@@ -45,6 +46,7 @@
             </Style>
 
             <Style TargetType="Editor">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="TextColor" Value="{StaticResource Black}"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource DarkGrayBlue}"/>
                 <Setter Property="FontFamily" Value="MontserratRegular"/>
@@ -70,8 +72,12 @@
                 <Setter Property="HeightRequest" Value="20"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="Padding" Value="0"/>
-                <Setter Property="Source" Value="back.png"/>
-                <!-- TODO - Source para UWP-->
+                <Setter Property="Source">
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android" Value="back.png" />
+                        <On Platform="UWP" Value="Images/back.png" />
+                    </OnPlatform>
+                </Setter>
             </Style>
 
             <Style TargetType="ImageButton" x:Key="OkButton">
@@ -79,7 +85,12 @@
                 <Setter Property="WidthRequest" Value="40"/>
                 <Setter Property="HorizontalOptions" Value="End"/>
                 <Setter Property="Padding" Value="0"/>
-                <Setter Property="Source" Value="ok.png"/>
+                <Setter Property="Source">
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android" Value="ok.png"/>
+                        <On Platform="UWP" Value="Images/ok.png"/>
+                    </OnPlatform>
+                </Setter>
             </Style>
             
             <Style TargetType="Label" x:Key="BaseLabel">
@@ -94,15 +105,19 @@
                 <Setter Property="HasShadow" Value="False"/>
             </Style>
 
-            <Style TargetType="Label" x:Key="CompanyCityStateLabel" BasedOn="{StaticResource BaseLabel}">
-                <Setter Property="TextColor" Value="{StaticResource Gray}"/>
+            <Style TargetType="Label" x:Key="TitlePrimary" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="TextColor" Value="{StaticResource Purple}"/>
             </Style>
 
-            <Style TargetType="Label" x:Key="JobTitleLabel" BasedOn="{StaticResource BaseLabel}">
+            <Style TargetType="Label" x:Key="TextPrimary" BasedOn="{StaticResource BaseLabel}">
                 <Setter Property="TextColor" Value="{StaticResource DarkGray}"/>
             </Style>
 
-            <Style TargetType="Label" x:Key="TitleLabelPurple" BasedOn="{StaticResource BaseLabel}">
+            <Style TargetType="Label" x:Key="TextSecundary" BasedOn="{StaticResource BaseLabel}">
+                <Setter Property="TextColor" Value="{StaticResource Gray}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="MoneyLabel" BasedOn="{StaticResource BaseLabel}">
                 <Setter Property="TextColor" Value="{StaticResource Purple}"/>
             </Style>
 
@@ -120,16 +135,28 @@
             <!--Icones-->
             <Style TargetType="ImageButton" Class="SearchButton">
                 <Setter Property="BackgroundColor" Value="Transparent"/>
-                <Setter Property="Source" Value="search.png" />
+                <Setter Property="Source">
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android" Value="search.png"/>
+                        <On Platform="UWP" Value="Images/search.png"/>
+                    </OnPlatform>
+                </Setter>
                 <Setter Property="HorizontalOptions" Value="Start"/>
                 <Setter Property="WidthRequest" Value="20"/>
             </Style>
 
             <Style TargetType="ImageButton" Class="PinButton">
                 <Setter Property="BackgroundColor" Value="Transparent"/>
-                <Setter Property="Source" Value="pin.png" />
-                <Setter Property="HorizontalOptions" Value="Start"/>
-                <Setter Property="WidthRequest" Value="20"/>
+                <Setter Property="Source">
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android" Value="pin.png"/>
+                        <On Platform="UWP" Value="Images/pin.png"/>
+                    </OnPlatform>
+                </Setter>
+                <Setter Property="HeightRequest" Value="22"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                
+                
             </Style>
         </ResourceDictionary>
     </Application.Resources>

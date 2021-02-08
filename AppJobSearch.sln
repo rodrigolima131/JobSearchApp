@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewJobSearch.App.UWP", "New
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewJobSearch.App.Android", "NewJobSearch.App\NewJobSearch.App.Android\NewJobSearch.App.Android.csproj", "{5521288F-6EE0-4DF2-9A63-9079960F9B3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewJobSearch.App", "NewJobSearch.App\NewJobSearch.App\NewJobSearch.App.csproj", "{D4B1C02E-C8A8-418D-9DEA-C24082A8FD06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewJobSearch.App", "NewJobSearch.App\NewJobSearch.App\NewJobSearch.App.csproj", "{D4B1C02E-C8A8-418D-9DEA-C24082A8FD06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,6 +64,8 @@ Global
 		{686A40B0-8437-4403-9C44-56A53BF1565D}.Release|x86.ActiveCfg = Release|Any CPU
 		{686A40B0-8437-4403-9C44-56A53BF1565D}.Release|x86.Build.0 = Release|Any CPU
 		{0E6314AA-6DD4-40C7-A230-CC1484C8B5E9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0E6314AA-6DD4-40C7-A230-CC1484C8B5E9}.Debug|Any CPU.Build.0 = Debug|x86
+		{0E6314AA-6DD4-40C7-A230-CC1484C8B5E9}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{0E6314AA-6DD4-40C7-A230-CC1484C8B5E9}.Debug|ARM.ActiveCfg = Debug|ARM
 		{0E6314AA-6DD4-40C7-A230-CC1484C8B5E9}.Debug|ARM.Build.0 = Debug|ARM
 		{0E6314AA-6DD4-40C7-A230-CC1484C8B5E9}.Debug|ARM.Deploy.0 = Debug|ARM

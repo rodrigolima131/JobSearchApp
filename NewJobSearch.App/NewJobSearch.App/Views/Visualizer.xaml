@@ -18,61 +18,59 @@
             <BoxView StyleClass="LinePurple"/>
             <ScrollView>
         <StackLayout>
-        <Grid RowSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Label Text="Digital Ocean"  Style="{StaticResource CompanyCityStateLabel}"  Grid.ColumnSpan="2"/>
-                <Label Text="Back-End Developer"  Style="{StaticResource JobTitleLabel}" Grid.Row="1"/>
-                <Label Text="São Paulo - SP"  Style="{StaticResource CompanyCityStateLabel}"  Grid.Row="2"/>
-                <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="7.0-11k" Style="{StaticResource TitleLabelPurple}"/>
-                            <Span Text=" BRL" Style="{StaticResource CurrencyLabel}"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label Text="CLT" Style="{StaticResource JobTitleLabel}" Grid.Row="4"/>
-                <Label Text="Tags" Grid.Row="5"/>
+                    <Grid RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Digital Ocean"  Style="{StaticResource TextSecundary}"  Grid.ColumnSpan="2"/>
+                        <Label Text="Back-End Developer"  Style="{StaticResource TextPrimary}" Grid.Row="1"/>
+                        <Label Text="São Paulo - SP"  Style="{StaticResource TextSecundary}"  Grid.Row="2"/>
+                        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="7.0-11k" Style="{StaticResource MoneyLabel}"/>
+                                    <Span Text=" BRL" Style="{StaticResource CurrencyLabel}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Text="CLT" Style="{StaticResource TextPrimary}" Grid.Row="4"/>
+                        <Label Text="Tags" Grid.Row="5"/>
 
-                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource JobTitleLabel}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Pub. " />
-                            <Span Text="06/02/2021" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                        <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Style="{StaticResource TextPrimary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Pub. " />
+                                    <Span Text="06/02/2021" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
 
-                <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource IdLabel}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="id. " />
-                            <Span Text="23145" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </Grid>
-
-            <Label Text="Interresados enviar e-mail para" Style="{StaticResource JobTitleLabel}" />
-            <Label Text="job@digitalocean.com.br" Style="{StaticResource CompanyCityStateLabel}" />
-            
-            <Label Text="Descrição Empresa" Style="{StaticResource TitleLabelPurple}"/>
-            <Label Text=" A DigitalOcean, Inc é uma provedora americana de infraestrutura em nuvem com sede na cidade de Nova York" Style="{StaticResource JobTitleLabel}"/>
-            <Label Text="Descrição do trabalho" Style="{StaticResource TitleLabelPurple}"/>
-            <Label Text="Implementar novas tecnologias de gerenciamento de servidores fazer integração com ferramentas VM" Style="{StaticResource JobTitleLabel}"/>
-            <Label Text="Beneficios" Style="{StaticResource TitleLabelPurple}"/>
-            <Label Text="Vale transporte Vale transporta" Style="{StaticResource JobTitleLabel}"/>
+                        <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource IdLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="id. " />
+                                    <Span Text="23145" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                    <Label Style="{StaticResource TextPrimary}"   Text="Interresados enviar e-mail para" />
+                    <Label Style="{StaticResource TextSecundary}" Text="job@digitalocean.com.br"  />
+                    <Label Style="{StaticResource TitlePrimary}"  Text="Descrição Empresa" />
+                    <Label Style="{StaticResource TextPrimary}"   Text=" A DigitalOcean, Inc é uma provedora americana de infraestrutura em nuvem com sede na cidade de Nova York" />
+                    <Label Style="{StaticResource TitlePrimary}"  Text="Descrição do trabalho" />
+                    <Label Style="{StaticResource TextPrimary}"   Text="Implementar novas tecnologias de gerenciamento de servidores fazer integração com ferramentas VM" />
+                    <Label Style="{StaticResource TitlePrimary}"  Text="Beneficios" />
+                    <Label Style="{StaticResource TextPrimary}"   Text="Vale transporte Vale transporta" />
             </StackLayout>
             </ScrollView>
         </StackLayout>
