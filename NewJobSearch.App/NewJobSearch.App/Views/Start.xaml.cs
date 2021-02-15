@@ -36,5 +36,12 @@ namespace NewJobSearch.App.Views
         {
             TxtCityState.Focus();
         }
+
+        private void Sair(object sender, EventArgs e)
+        {
+            App.Current.Properties.Remove("User");
+            Navigation.PushAsync(new Views.Login());
+
+        }
     }
 }

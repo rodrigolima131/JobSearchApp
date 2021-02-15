@@ -10,7 +10,16 @@ namespace NewJobSearch.App
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.Login());
+            //Para remover essa validação 
+            //App.Current.Properties.ContainsKey("User")
+            if (App.Current.Properties.ContainsKey("User"))
+            {
+                MainPage = new NavigationPage(new Views.Start());
+            }
+            else
+            { 
+               MainPage = new NavigationPage(new Views.Login());
+            }
         }
 
         protected override void OnStart()
