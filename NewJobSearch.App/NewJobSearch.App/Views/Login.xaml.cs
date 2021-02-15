@@ -61,6 +61,6 @@ namespace NewJobSearch.App.Views
                 }
             }
             await Navigation.PopAllPopupAsync();
-            }
+        }
     }
 }

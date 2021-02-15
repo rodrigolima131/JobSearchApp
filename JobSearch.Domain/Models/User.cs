@@ -15,8 +15,9 @@ namespace JobSearch.Domain.Models
         public string Name { get; set; }
 
         [Display(Name = "Email", ResourceType = typeof(JobSearch.Domain.Utility.Language.filds))]
-        [Required(ErrorMessageResourceType = typeof(JobSearch.Domain.Utility.Language.Message), ErrorMessageResourceName = "MSG_E002")]
-        [EmailAddress]
+        [Required(ErrorMessageResourceType = typeof(JobSearch.Domain.Utility.Language.Message), ErrorMessageResourceName = "MSG_E001")]
+        [EmailAddress(ErrorMessageResourceType = typeof(JobSearch.Domain.Utility.Language.Message), ErrorMessageResourceName = "MSG_E002")]
+
         public string Email { get; set; }
         [Display(Name = "Password", ResourceType = typeof(JobSearch.Domain.Utility.Language.filds))]
         [Required(ErrorMessageResourceType = typeof(JobSearch.Domain.Utility.Language.Message), ErrorMessageResourceName = "MSG_E001")]
